@@ -1,0 +1,7 @@
+__pycache__
+database.db
+zshrc.sh
+DOckerfile
+.git
+.gitignore
+README.md
