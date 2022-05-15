@@ -33,4 +33,4 @@ source the file
 source zshrc.sh
 ```
 
-Type some command and git to [localhost:5000](http://localhost:5000)
+Type some command and go to [localhost:5000](http://localhost:5000)
