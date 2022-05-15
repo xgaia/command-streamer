@@ -3,11 +3,9 @@
 ## Install
 
 ```bash
-pip install flask sqlite3
+pip install flask
 ```
-
 ## Run
-
 
 ```bash
 SECRET_TOKEN="<secret_token>" FLASK_APP=app.py flask run
