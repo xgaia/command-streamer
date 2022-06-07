@@ -62,3 +62,20 @@ def get_commands():
     for row in rows:
         data.append(row[0])
     return {"commands": data}
+
+
+@app.route("/reset", methods=["GET"])
+def reset():
+
+    if "token" not in request.headers:
+        return {"message": "no"}, 401
+    else:
+        if request.headers["token"] != TOKEN:
+            return {"message": "no"}, 401
+
+    connection = sqlite3.connect("database.db")
+    cursor = connection.cursor()
+    cursor.execute("DELETE FROM command")
+    connection.commit()
+    connection.close()
+    return {"message": "ok"}
