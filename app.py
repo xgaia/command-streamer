@@ -41,9 +41,13 @@ def command():
             return {"message": "no"}, 401
 
     data = request.get_json()
+    if data.get("type") == "python":
+        cmd = f'>>> {data["command"]}'
+    else:
+        cmd = data["command"]
     connection = sqlite3.connect("database.db")
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO command VALUES (NULL, ?)", (data["command"],))
+    cursor.execute("INSERT INTO command VALUES (NULL, ?)", (cmd,))
     connection.commit()
     connection.close()
     return {"message": "ok"}

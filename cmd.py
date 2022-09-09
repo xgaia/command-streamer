@@ -15,6 +15,7 @@ def cmd_stream():
     }
     data = {
         "command": last_cmd,
+        "type": "python",
     }
     requests.post(f"{APP_URL}/command", headers=headers, data=json.dumps(data))
 
