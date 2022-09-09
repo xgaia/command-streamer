@@ -41,6 +41,10 @@ source the file
 ```zsh
 source zshrc.sh
 ```
+### Bash
+
+you have to install bash-preexec: https://github.com/rcaloras/bash-preexec
+source cmd_bash.sh
 
 ## Stream your python interperter
 
