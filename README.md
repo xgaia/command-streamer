@@ -42,4 +42,8 @@ source the file
 source zshrc.sh
 ```
 
+## Stream your python interperter
+
+python -i cmd.py
+
 Type some command and go to [localhost:5000](http://localhost:5000)
